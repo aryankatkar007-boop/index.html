@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aryan Katkar - Portfolio</title>
+
+  <style>
+    /* ── PAGE BASICS ── */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ── NAVIGATION BAR ── */
+    nav {
+      background-color: #222;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #90ee90;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #90ee90;
+    }
+
+    /* ── HERO (top big section) ── */
+    .hero {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      background-color: #90ee90;
+      color: #000;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .hero a:hover {
+      background-color: #6fcc6f;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 28px;
+      border-bottom: 3px solid #90ee90;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .about-grid p {
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .facts {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .facts p {
+      margin: 8px 0;
+    }
+
+    /* ── SKILLS ── */
+    .skill {
+      margin-bottom: 16px;
+    }
+
+    .skill-name {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    /* This is the grey background bar */
+    .bar-bg {
+      background-color: #ddd;
+      border-radius: 5px;
+      height: 14px;
+    }
+
+    /* This is the coloured fill inside */
+    .bar-fill {
+      background-color: #90ee90;
+      height: 14px;
+      border-radius: 5px;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .project-card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0f7e0;
+      color: #333;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 3px 2px 0 0;
+    }
+
+    /* ── ACADEMICS ── */
+    .marks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .mark-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .mark-card .number {
+      font-size: 36px;
+      font-weight: bold;
+      color: #90ee90;
+    }
+
+    .mark-card .label {
+      color: #555;
+      margin-top: 8px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .contact-info a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .contact-info a:hover {
+      color: #5a9a5a;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #90ee90;
+      color: #000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6fcc6f;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">AK</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#marks">Academics</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Aryan Katkar</h1>
+    <p>CSE Student · Developer · Creative Thinker</p>
+    <a href="#contact">Get In Touch</a>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div>
+        <p>Hello! I'm <strong>Aryan Katkar</strong>, a passionate Computer Science & Engineering student who loves creative thinking and problem solving.</p>
+        <p>I enjoy building projects where technology meets creativity — clean code, good design, and smart solutions.</p>
+      </div>
+      <div class="facts">
+        <p>🎓 <strong>Degree:</strong> B.Tech CSE</p>
+        <p>💡 <strong>Specialty:</strong> Creative Thinking</p>
+        <p>💻 <strong>Focus:</strong> Software Development</p>
+        <p>🚀 <strong>Status:</strong> Open to Internships</p>
+        <p>📍 <strong>Location:</strong> Maharashtra, India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+      <div class="skill-name">🌐 HTML / CSS</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 88%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">⚙️ C Programming</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 78%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">🐍 Python</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 70%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">🧮 Data Structures</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 72%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">🗄️ SQL / Databases</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 65%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">🧠 Problem Solving</div>
+      <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio showcasing skills and projects — built for a Creative Thinking course.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Engineering Calculator</h3>
+        <p>A command-line calculator in C supporting arithmetic, trigonometry, and unit conversions.</p>
+        <span class="tag">C Programming</span>
+        <span class="tag">CLI</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Creative Thinking Framework</h3>
+        <p>A structured framework using design thinking to solve real-world engineering problems.</p>
+        <span class="tag">Research</span>
+        <span class="tag">Design Thinking</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACADEMICS -->
+  <section id="marks">
+    <h2>Academic Record</h2>
+    <div class="marks-grid">
+
+      <div class="mark-card">
+        <div class="number">93.28%</div>
+        <div class="label">10th Grade</div>
+      </div>
+
+      <div class="mark-card">
+        <div class="number">85%</div>
+        <div class="label">12th Grade</div>
+      </div>
+
+      <div class="mark-card">
+        <div class="number">93.27ile</div>
+        <div class="label">MHTCET Percentile</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+        <a href="mailto:aryan.katkar@example.com">✉️ aryan.katkar@example.com</a>
+        <a href="#">💼 linkedin.com/in/aryankatkar</a>
+        <a href="#">🐙 github.com/aryankatkar</a>
+      </div>
+
+      <div>
+        <label>Your Name</label>
+        <input type="text" placeholder="Your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com">
+
+        <label>Message</label>
+        <textarea rows="4" placeholder="Your message..."></textarea>
+
+        <button onclick="sendMessage(this)">Send Message</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & Built by Aryan Katkar · © 2026</p>
+  </footer>
+
+  <script>
+    // When the button is clicked, change its text briefly
+    function sendMessage(btn) {
+      btn.textContent = "Message Sent ✓";
+      btn.style.backgroundColor = "#4df5ff";
+
+      // After 3 seconds, reset the button
+      setTimeout(function() {
+        btn.textContent = "Send Message";
+        btn.style.backgroundColor = "";
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
